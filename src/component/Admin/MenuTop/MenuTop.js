@@ -3,10 +3,16 @@ import { Link } from 'react-router-dom'
 import { Button } from 'antd';
 import { MenuFoldOutlined, MenuUnfoldOutlined, PoweroffOutlined } from '@ant-design/icons';
 import Logo from '../../../assets/img/png/logo-white.png';
+import { logout } from '../../../api/auth';
+
 import './MenuTop.scss';
 
 export default function MenuTop(props) {
     const { menuCollapsed, setMenuCollapsed } = props;
+    const logoutUser = () => {
+        logout();
+        window.location.reload();
+    }
 
     return (
         <div className="menu-top">
@@ -20,7 +26,7 @@ export default function MenuTop(props) {
             </div>
             
             <div className="menu-top__right">
-                <Button type="link" onClick={()=> console.log('Desconectado!')}>
+                <Button type="link" onClick={logoutUser}>
                     <PoweroffOutlined />
                 </Button>
             </div>

@@ -1,34 +1,25 @@
 @import "../../../scss/index.scss";
 
-.register-form {
-  text-align: left;
-
-  .ant-form-item {
-    &:nth-child(3),
-    &:last-of-type {
-      margin: 0;
-    }
+.login-form {
+  .ant-form-item:last-of-type {
+    margin: 0;
   }
 
   &__input {
     .ant-input-prefix {
       i {
-        font-size: 0em + 22px / $defaultFontSize;
+        form-size: 0em + 22px / $defaultFontSize;
       }
     }
 
     input {
-      padding: 0px 20px 0px 40px !important;
       font-size: 0em + 20px / $defaultFontSize;
+      padding: 0px 20px 0px 40px !important;
       &:focus {
         border-color: $primary-color;
         box-shadow: none;
       }
     }
-  }
-
-  &__checkbox {
-      padding-top: 20px;
   }
 
   &__button {
@@ -37,6 +28,7 @@
     background-color: $primary-color;
     color: $font-light;
     height: 42px;
+    margin-top: 20px;
 
     &:hover {
       background-color: $primary-color-hover;
