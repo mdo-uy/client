@@ -35,7 +35,7 @@ function MenuSider(props) {
 
             </Menu>    
         </Sider>
-    );;
+    );
 }
 
 export default  withRouter(MenuSider);
