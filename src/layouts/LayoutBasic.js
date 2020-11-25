@@ -1,24 +1,24 @@
 import React from 'react';
 import { Route, Switch }  from 'react-router-dom';
-import { Layout } from 'antd';
+import { Layout, Row, Col } from 'antd';
+import MenuTop from '../component/Web/MenuTop';
 
 import './LayoutBasic.scss';
 
 export default function LayoutBasic(props) {
     const { routes } = props;
-    const { Header, Content, Footer } = Layout;
+    const { Footer } = Layout;
 
     return (
-        <Layout>
-            <h2>Menú Basic</h2>
-            <Layout>
-                <Header>Header</Header>
-                <Content>
-                    <LoadRoutes routes={routes} />
-                </Content>
+        <Row>
+            <Col md={4} />
+            <Col md={16}>
+                <MenuTop />
+                <LoadRoutes routes={routes} />
                 <Footer>Footer</Footer>
-            </Layout>
-        </Layout>
+            </Col>            
+            <Col md={4} />
+        </Row>
     );
 }
 
